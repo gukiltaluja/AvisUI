@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <title>AVIS</title>
+  <!--favicon-->
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <!-- simplebar CSS-->
+  <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet"/>
+  <!-- Bootstrap core CSS-->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+  <!--Data Tables -->
+  <link href="assets/plugins/bootstrap-datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/plugins/bootstrap-datatable/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+  <!-- animate CSS-->
+  <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+  <!-- Icons CSS-->
+  <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+  <!-- Sidebar CSS-->
+  <link href="assets/css/sidebar-menu.css" rel="stylesheet"/>
+  <!-- Custom Style-->
+  <link href="assets/css/app-style.css" rel="stylesheet"/>
+  
+</head>
+
+<body>
+
+  
+<!-- Start wrapper-->
+ <div id="wrapper">
+ 
+  <!--Start sidebar-wrapper-->
+   <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+     <div class="brand-logo">
+       <h5 class="logo-text">AVIS</h5>
+	 </div>
+	 <ul class="sidebar-menu do-nicescrol">
+    <li>
+        <a href="index.html" class="waves-effect">
+         <i class="icon-home"></i> <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+         <a href="index.html" class="waves-effect">
+           <i class="icon-layers"></i> <span>Masters</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="sidebar-submenu">
+          <li><a href="masters.html">Client Masters</a></li>
+                            <li><a href="order-master.html">Order Masters</a></li>
+                            <li><a href="delivery.html">Delivery Module</a></li>
+        </ul>
+      </li>
+      <!--<li>-->
+      <!--   <a href="index.html" class="waves-effect">-->
+      <!--     <i class="icon-layers"></i> <span>Basic Master</span> <i class="fa fa-angle-left pull-right"></i>-->
+      <!--  </a>-->
+      <!--  <ul class="sidebar-submenu">-->
+      <!--   <li><a href="tyre.html">Tyre</a></li>-->
+      <!--                      <li><a href="usage-type.html">Usage Type</a></li>-->
+      <!--                      <li><a href="car-price.html">Car Price</a></li>-->
+      <!--                      <li><a href="part.html">Part</a></li>-->
+      <!--                      <li><a href="part-type.html">Part Type</a></li>-->
+      <!--                      <li><a href="rv.html">RV</a></li>-->
+      <!--                      <li><a href="rmtb.html">RMTB</a></li>-->
+      <!--                      <li><a href="fuel-type.html">Fuel Type</a></li>-->
+      <!--                      <li><a href="fuel-tank-type.html">Fuel Tank Type</a></li>-->
+      <!--                      <li><a href="vehicle-segment.html">Vehicle Segment</a></li>-->
+      <!--                      <li><a href="color-code.html">Color Code</a></li>-->
+      <!--                      <li><a href="bank-master.html">Bank Master</a></li>-->
+      <!--                      <li><a href="supplier-master-supplier.html">Supplier Master Supplier</a></li>-->
+      <!--                      <li><a href="master-supplier-location-details.html">Supplier Location Details</a></li>-->
+      <!--                      <li><a href="master-supplier-type-details.html">Supplier Type Details</a></li>-->
+                            <!--<li><a href="insurance-details.html">Insurance Details</a></li>-->
+      <!--                      <li><a href="master-insurance-zone-vehicle-segment-car-cc.html">Insurance Zone Vehicle Segment Car CC </a></li>-->
+      <!--                      <li><a href="insurance-idv-details.html">Insurance IDV Details </a></li>-->
+      <!--                       <li><a href="master-road-type-tax-details.html">Master RoadType Tax Details</a></li>-->
+      <!--                        <li><a href="master-insurance-company-details.html">Master Insurance Company Details</a></li>-->
+      <!--                        <li><a href="master-insurance-third-party.html">Master Insurance Third Party</a></li>-->
+      <!--                        <li><a href="master-accessories-type-details.html">Master Accessories Type Details</a></li>-->
+                              
+      <!--                        <li><a href="master-menufacturer-details.html">Master Manufacturer Details</a></li>-->
+      <!--                         <li><a href="Master-Menufacturer-Contact-details.html">Master Manufacture Contact Details</a></li>-->
+      <!--                          <li><a href="master-variant-details.html">Master Variant Details</a></li>-->
+      <!--                           <li><a href="master-model-details.html">Master Model Details</a></li>-->
+      <!--                             <li><a href="master-service-schedule-details.html">Master Service Schedule Details</a></li>-->
+      <!--                              <li><a href="master-service-details.html">Master Service Details </a></li>-->
+      <!--                               <li><a href="master-city-category-details.html">Master City Category Details </a></li>-->
+      <!--                                <li><a href="master-category-schedule-details.html">Master Category Schedule Details </a></li>-->
+      <!--                                 <li><a href="master-accessories-details.html">Master Accessories Details </a></li>-->
+      <!--  </ul>-->
+      <!--</li>-->
+      
+       <li>
+        <a href="javaScript:void();" class="waves-effect">
+          <i class="fa fa-share"></i> <span>Basic Master</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> COMPONENT MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+               <li><a href="tyre.html">  <i class="fa fa-circle-o"></i> Tyre</a></li>
+                            <li><a href="usage-type.html"> <i class="fa fa-circle-o"></i> Usage Type</a></li>
+                            <li><a href="car-price.html"> <i class="fa fa-circle-o"></i> Car Price</a></li>
+                            <li><a href="part.html"> <i class="fa fa-circle-o"></i> Part</a></li>
+                            <li><a href="part-type.html"> <i class="fa fa-circle-o"></i> Part Type</a></li>
+                            <li><a href="rv.html"> <i class="fa fa-circle-o"></i> RV</a></li>
+                            <li><a href="rmtb.html"> <i class="fa fa-circle-o"></i> RMTP</a></li>
+                            <li><a href="fuel-type.html"> <i class="fa fa-circle-o"></i> Fuel Type</a></li>
+                            <li><a href="fuel-tank-type.html"> <i class="fa fa-circle-o"></i> Fuel Tank Type</a></li>
+                            <li><a href="vehicle-segment.html"> <i class="fa fa-circle-o"></i> Vehicle Segment</a></li>
+                            <li><a href="color-code.html"> <i class="fa fa-circle-o"></i> Color Code</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> BANK MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                            <li><a href="bank-master.html"> <i class="fa fa-circle-o"></i> Bank</a></li>           
+            </ul>
+          </li>
+        </ul>
+          <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> SUPPLIER MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                           <li><a href="supplier-master-supplier.html"><i class="fa fa-circle-o"></i>  Supplier</a></li>
+                            <li><a href="master-supplier-location-details.html"><i class="fa fa-circle-o"></i>  Supplier Location</a></li>
+                            <li><a href="master-supplier-type-details.html"><i class="fa fa-circle-o"></i>  Supplier Details</a></li>           
+            </ul>
+          </li>
+        </ul>
+         <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> VARIANT MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                            <li><a href="master-variant-details.html"><i class="fa fa-circle-o"></i> Variant </a></li>           
+            </ul>
+          </li>
+        </ul>
+         
+         <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> MANUFACTURER MATER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                             <li><a href="master-menufacturer-details.html"> <i class="fa fa-circle-o"></i> Master Manufacturer </a></li>
+                               <li><a href="Master-Menufacturer-Contact-details.html"><i class="fa fa-circle-o"></i> Master Manufacture Contact </a></li>           
+            </ul>
+          </li>
+        </ul>
+         <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> INSURANCE TAX MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                             <li><a href="master-insurance-company-details.html"> <i class="fa fa-circle-o"></i>Master Insurance Company </a></li> 
+                           <li><a href="insurance-idv-details.html"><i class="fa fa-circle-o"></i> Insurance IDV  </a></li>
+                           <li><a href="master-road-type-tax-details.html"><i class="fa fa-circle-o"></i> Master Road Type Tax </a></li>
+                           <li><a href="master-insurance-third-party.html"><i class="fa fa-circle-o"></i> Master Insurance Third Party</a></li>
+                           <li><a href="#"><i class="fa fa-circle-o"></i> Insurance Zone</a></li>   
+                           <li><a href="master-insurance-zone-vehicle-segment-car-cc.html"><i class="fa fa-circle-o"></i> Insurance Zone Vehicle Segment Car CC </a></li>  
+                           <li><a href="master-accessories-type-details.html"><i class="fa fa-circle-o"></i> Master Accessories Type </a></li>        
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> SERVICES MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                             <li><a href="#"><i class="fa fa-circle-o"></i> Service Name</a></li>
+                               <li><a href="#"><i class="fa fa-circle-o"></i> Car Category</a></li>   
+                               <li><a href="#"><i class="fa fa-circle-o"></i> car category service cost</a></li>  
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Accessories</a></li>      
+            </ul>
+          </li>
+        </ul>
+
+         <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> STATE-CITY MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                             <li><a href="#"><i class="fa fa-circle-o"></i> State</a></li>
+                               <li><a href="#"><i class="fa fa-circle-o"></i> City</a></li>   
+                               <li><a href="#"><i class="fa fa-circle-o"></i> City Unlimited Usage</a></li>  
+                                <li><a href="#"><i class="fa fa-circle-o"></i> City Document</a></li>  
+                                <li><a href="#"><i class="fa fa-circle-o"></i> City Services</a></li>    
+            </ul>
+          </li>
+        </ul>
+         <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> MODEL MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                             <li><a href="#"><i class="fa fa-circle-o"></i> Model</a></li>
+                               <li><a href="#"><i class="fa fa-circle-o"></i> Service Schedule</a></li>    
+            </ul>
+          </li>
+        </ul>
+
+      </li>
+       <li>
+        <a href="quotation-module.html" class="waves-effect">
+         <i class="icon-layers"></i> <span>Quotation Module</span>
+        </a>
+      </li>
+
+    </ul>
+
+      
+	 
+   </div>
+   <!--End sidebar-wrapper-->
+
+<!--Start topbar header-->
+<header class="topbar-nav">
+ <nav class="navbar navbar-expand">
+     <h5 class="logo-text">AVIS</h5>
+  <ul class="navbar-nav mr-auto align-items-center">
+    <li class="nav-item">
+      <a class="nav-link toggle-menu" href="javascript:void();">
+       <i class="icon-menu menu-icon"></i>
+     </a>
+    </li>
+    <li class="nav-item">
+      <form class="search-bar">
+        <input type="text" class="form-control" placeholder="Enter keywords">
+         <a href="javascript:void();"><i class="icon-magnifier"></i></a>
+      </form>
+    </li>
+  </ul>
+     
+  <ul class="navbar-nav align-items-center right-nav-link">
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+    <i class="icon-bell"></i><span class="badge badge-primary badge-up">1</span></a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          You have 1 Notifications
+          <span class="badge badge-primary">1</span>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </li>
+ <!--    <li class="nav-item language">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="#"><i class="flag-icon flag-icon-gb"></i></a>
+      <ul class="dropdown-menu dropdown-menu-right">
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-gb mr-2"></i> English</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-fr mr-2"></i> French</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-cn mr-2"></i> Chinese</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-de mr-2"></i> German</li>
+        </ul>
+    </li> -->
+    <li class="nav-item">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+        <span class="user-profile"><img src="assets/images/demo-images.jpg" class="img-circle" alt="user avatar"></span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-right">
+       <li class="dropdown-item user-details">
+        <a href="javaScript:void();">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="assets/images/demo-images.jpg" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-2 user-title">Technologies</h6>
+            <p class="user-subtitle">abcd@gmail.com</p>
+            </div>
+           </div>
+          </a>
+        </li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</header>
+<!--End topbar header-->
+
+<div class="clearfix"></div>
+	
+  <div class="content-wrapper">
+    <div class="container-fluid">
+
+      <!--Start Dashboard Content-->
+	  
+		  
+		<div class="row pt-2 pb-2">
+        <div class="col-sm-9">
+        <h4 class="page-title">Application</h4>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javaScript:void();">Basic Master
+</a></li>
+            <li class="breadcrumb-item"><a href="javaScript:void();">Master Insurance Company Details</a></li>
+         </ol>
+     </div>
+     </div>
+
+
+    <div class="row">
+      <div class="col-lg-12">
+         <div class="card">
+           <div class="card-body">
+             
+           <!-- <div class="card-header text-uppercase">PRINCIPAL</div> -->
+           <div class="pt-4">
+            <form>
+             <div class="row">
+          <div class="form-group col-md-12">
+            <input type="text" class="form-control" id="input-1" placeholder="Insurance Company">
+           </div>
+           
+           
+           
+           
+           
+                     
+           
+           <div class="form-group col-md-12">
+        <div class="form-check padd mb-2">
+                <input type="checkbox" class="form-check-input" id="check2" value="">
+                <label class="form-check-label" for="check2">Active</label>
+                </div>
+           </div>
+        </div>
+          </form>
+          </div>
+          <div class="buttondd" style="text-align: right;">
+  <button type="submit" class="btn btn-primary save"><i class="fa fa-address-card-o" aria-hidden="true"></i>  &nbsp&nbspSave</button>
+  <button type="submit" class="btn btn-primary cancel">Reset</button>
+
+          
+      </div>
+         </div>
+         </div>
+       </div>
+
+      </div><!--End Row-->
+       
+
+
+           <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive">
+              <table id="example" class="table table-bordered">
+                <thead>
+                    <tr>
+                       <th data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;View &quot;}">View</th>
+<th data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Insurance Company&quot;}">Insurance Company</th>
+<th data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Active &quot;}">Active</th>
+<th data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Tools&quot;}">Tools</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+<td><i class="fa fa-stop-circle-o" aria-hidden="true"></i></td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Bajaj Allianz General Insurance Company&quot;}">Bajaj Allianz General Insurance Company</td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;True &quot;}">True</td>
+<td><i class="fa fa-plus-square" aria-hidden="true"></i>   <i class="fa fa-times" aria-hidden="true"></i></td>
+</tr>
+<tr>
+<td><i class="fa fa-stop-circle-o" aria-hidden="true"></i></td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Bharti AXA General Insurance Company Limited.&quot;}">Bharti AXA General Insurance Company Limited.</td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;True &quot;}">True</td>
+<td><i class="fa fa-plus-square" aria-hidden="true"></i>   <i class="fa fa-times" aria-hidden="true"></i></td>
+</tr>
+<tr>
+<td><i class="fa fa-stop-circle-o" aria-hidden="true"></i></td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Edelweiss General Insurance Company Limited&quot;}">Edelweiss General Insurance Company Limited</td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;True &quot;}">True</td>
+<td><i class="fa fa-plus-square" aria-hidden="true"></i>   <i class="fa fa-times" aria-hidden="true"></i></td>
+</tr>
+<tr>
+<td><i class="fa fa-stop-circle-o" aria-hidden="true"></i></td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Future Generali India Insurance Co. Ltd&quot;}">Future Generali India Insurance Co. Ltd</td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;True &quot;}">True</td>
+<td><i class="fa fa-plus-square" aria-hidden="true"></i>   <i class="fa fa-times" aria-hidden="true"></i></td>
+</tr>
+<tr>
+<td><i class="fa fa-stop-circle-o" aria-hidden="true"></i></td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;HDFC Ergo G.I.C Ltd&quot;}">HDFC Ergo G.I.C Ltd</td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;True &quot;}">True</td>
+<td><i class="fa fa-plus-square" aria-hidden="true"></i>   <i class="fa fa-times" aria-hidden="true"></i></td>
+</tr>
+<tr>
+<td><i class="fa fa-stop-circle-o" aria-hidden="true"></i></td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;ICICI Lombard General Insurance Co. Ltd.&quot;}">ICICI Lombard General Insurance Co. Ltd.</td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;True &quot;}">True</td>
+<td><i class="fa fa-plus-square" aria-hidden="true"></i>   <i class="fa fa-times" aria-hidden="true"></i></td>
+</tr>
+<tr>
+<td><i class="fa fa-stop-circle-o" aria-hidden="true"></i></td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Iffco Tolio General Insurance Co. Ltd.&quot;}">Iffco Tolio General Insurance Co. Ltd.</td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;True &quot;}">True</td>
+<td><i class="fa fa-plus-square" aria-hidden="true"></i>   <i class="fa fa-times" aria-hidden="true"></i></td>
+</tr>
+<tr>
+<td><i class="fa fa-stop-circle-o" aria-hidden="true"></i></td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Kotak Mahindra General Insurance Company Limited&quot;}">Kotak Mahindra General Insurance Company Limited</td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;True &quot;}">True</td>
+<td><i class="fa fa-plus-square" aria-hidden="true"></i>   <i class="fa fa-times" aria-hidden="true"></i></td>
+</tr>
+<tr>
+<td><i class="fa fa-stop-circle-o" aria-hidden="true"></i></td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;National Insurance Company Limited&quot;}">National Insurance Company Limited</td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;True &quot;}">True</td>
+<td><i class="fa fa-plus-square" aria-hidden="true"></i>   <i class="fa fa-times" aria-hidden="true"></i></td>
+</tr>
+<tr>
+<td><i class="fa fa-stop-circle-o" aria-hidden="true"></i></td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Reliance G.I.C Ltd&quot;}">Reliance G.I.C Ltd</td>
+<td data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;True &quot;}">True</td>
+<td><i class="fa fa-plus-square" aria-hidden="true"></i>   <i class="fa fa-times" aria-hidden="true"></i></td>
+</tr>
+                    
+                </tbody>
+                <!--<tfoot>-->
+                <!--    <tr>-->
+                <!--        <th>View</th>-->
+                <!--        <th>Manufacturer</th>-->
+                <!--        <th>Model</th>-->
+                <!--        <th>Tyre Size</th>-->
+                <!--        <th>Active</th>-->
+                <!--        <th>Tools</th>-->
+                <!--    </tr>-->
+                <!--</tfoot>-->
+            </table>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- End Row-->
+       
+       
+       <!--End Dashboard Content-->
+      <!--start overlay-->
+	  <div class="overlay toggle-menu"></div>
+	<!--end overlay-->
+    </div>
+    <!-- End container-fluid-->
+    
+    </div><!--End content-wrapper-->
+   <!--Start Back To Top Button-->
+    <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+    <!--End Back To Top Button-->
+	
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          © All Rights Reserved. Amazin Automation Solution India Pvt. Ltd.
+        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+   
+  </div><!--End wrapper-->
+
+     <script>
+             function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+	
+	<!-- simplebar js -->
+	<script src="assets/plugins/simplebar/js/simplebar.js"></script>
+  <!-- waves effect js -->
+  <script src="assets/js/waves.js"></script>
+	<!-- sidebar-menu js -->
+	<script src="assets/js/sidebar-menu.js"></script>
+  <!-- Custom scripts -->
+  <script src="assets/js/app-script.js"></script>
+
+  <!--Data Tables js-->
+  <script src="assets/plugins/bootstrap-datatable/js/jquery.dataTables.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/dataTables.bootstrap4.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/dataTables.buttons.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/buttons.bootstrap4.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/jszip.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/pdfmake.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/vfs_fonts.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/buttons.html5.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/buttons.print.min.js"></script>
+  <script src="assets/plugins/bootstrap-datatable/js/buttons.colVis.min.js"></script>
+
+    <script>
+     $(document).ready(function() {
+      //Default data table
+       $('#default-datatable').DataTable();
+
+
+       var table = $('#example').DataTable( {
+        lengthChange: false,
+        buttons: [ 'copy', 'excel', 'pdf', 'print', 'colvis' ]
+      } );
+ 
+     table.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+      
+      } );
+
+    </script>
+  
+</body>
+</html>
+
