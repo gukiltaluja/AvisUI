@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>AVIS</title>
+    <!--favicon-->
+    <!-- Vector CSS -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!--Select Plugins-->
+    <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <!--inputtags-->
+    <link href="assets/plugins/inputtags/css/bootstrap-tagsinput.css" rel="stylesheet" />
+    <!--multi select-->
+    <link href="assets/plugins/jquery-multi-select/multi-select.css" rel="stylesheet" type="text/css">
+    <!--Bootstrap Datepicker-->
+    <link href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <!--Touchspin-->
+    <link href="assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css">
+
+    <!-- simplebar CSS-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- animate CSS-->
+    <link href="assets/css/animate.css" rel="stylesheet" type="text/css" />
+    <!-- Icons CSS-->
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <!-- Sidebar CSS-->
+    <link href="assets/css/sidebar-menu.css" rel="stylesheet" />
+    <!-- Custom Style-->
+    <link href="assets/css/app-style.css" rel="stylesheet" />
+
+    <!--Ion Range Slider-->
+    <link href="assets/plugins/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/ion-rangeslider/css/ion.rangeSlider.skinHTML5.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<style>
+    ul.sg-data-listone {
+display: inline-block !important;
+    padding: 0;
+    border: 1px solid #111;
+    border-bottom: none;
+    }
+    ul.sg-data-listone:last-child {
+    border-bottom: 1px solid;
+    border-top: none;
+}
+    ul {
+     padding-inline-start: 2px;
+     margin-bottom: 0px;
+    }
+    ul.sg-data-listone li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid;*/
+    }
+    ul.sg-data-listone li p {
+      padding: 0px 5px;
+    margin-top: .65rem;
+    margin: 0px;
+    font-size: 12px;
+    }
+    ul.sg-data-listone li:last-child,
+    ul.sg-data-listtwo li:last-child,
+    ul.sg-data-listthree li:last-child,
+    ul.sg-data-listfour li:last-child,
+    ul.sg-data-listfive li:last-child,
+    ul.sg-data-listsix li:last-child {
+    border-bottom: none !important;
+    text-align: center;
+    color: #111;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+ul.sg-data-listone li p {
+    width: 187px !important;
+}
+.table {
+  display: table;
+  border-collapse: collapse;
+  
+}
+
+/*.div-table .table .tr {
+display: table-row;
+    border: 1px solid #ddd;           
+    }*/
+   /*.div-table .table .tr:first-child {
+        font-weight:bold;
+      border-bottom:2px solid #ddd;
+      }*/
+      /*.div-table .table .tr:nth-child(even) {
+      background-color:#F9F9F9;
+    }*/
+
+.div-table .table .tr .td {
+    display: table-cell;
+    padding: 8px;
+    min-width: 190px;
+    text-align: center;
+    border-color: #111;
+    border: 1px solid #111;
+    border-bottom: 1px solid #111;
+    height: 40px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 400;
+           
+    }
+    .div-table .table .tr .td p{
+          margin-bottom: 0px;
+    text-align: center;
+    padding: 4px 0px;
+    text-transform: uppercase;
+    font-size: 15px;
+    }
+   s
+      .sg-td{
+        vertical-align: middle;
+      }
+      .div-table .table .tr {
+    background-color: #ce2827;
+    color: #fff;
+}
+/* Not necessary for table styling */
+.div-table, .table-tag {
+  float:left;
+  margin:0em;
+  
+}
+.div-table .title {
+    text-align:center;
+    padding-bottom:.5em;
+  }
+  .main-table-box-row{
+    overflow-x: scroll;
+    
+  }
+
+
+  /*********************/
+
+.select2-container--default .select2-selection--multiple {
+    background-color: white;
+    border-bottom: 1px solid #aaa !important;
+    border-radius: 0px;
+    cursor: text;
+    border: none;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border-bottom: 1px solid #ce2827 !important;
+    outline: 0;
+    border: none;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #ce2827;
+    border: 1px solid #ce2827;
+    border-radius: 4px;
+    cursor: default;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0 5px;
+    color: #fff;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px;
+}
+</style>
+
+<body>
+
+    <!-- Start wrapper-->
+    <div id="wrapper">
+
+        <!--Start sidebar-wrapper-->
+        <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+            <div class="brand-logo">
+                <h5 class="logo-text">AVIS</h5>
+            </div>
+            <ul class="sidebar-menu do-nicescrol">
+                <li>
+                    <a href="index.html" class="waves-effect">
+                        <i class="icon-home"></i> <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" class="waves-effect">
+                        <i class="icon-layers"></i> <span>Masters</span> <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="sidebar-submenu">
+                        <li><a href="masters.html">Client Masters</a></li>
+                        <li><a href="order-master.html">Order Masters</a></li>
+                        <li><a href="delivery.html">Delivery Module</a></li>
+                    </ul>
+                </li>
+                <li>
+        <a href="javaScript:void();" class="waves-effect">
+          <i class="fa fa-share"></i> <span>Basic Master</span>
+          <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> COMPONENT MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+               <li><a href="tyre.html">  <i class="fa fa-circle-o"></i> Tyre</a></li>
+                            <li><a href="usage-type.html"> <i class="fa fa-circle-o"></i> Usage Type</a></li>
+                            <li><a href="car-price.html"> <i class="fa fa-circle-o"></i> Car Price</a></li>
+                            <li><a href="part.html"> <i class="fa fa-circle-o"></i> Part</a></li>
+                            <li><a href="part-type.html"> <i class="fa fa-circle-o"></i> Part Type</a></li>
+                            <li><a href="rv.html"> <i class="fa fa-circle-o"></i> RV</a></li>
+                            <li><a href="rmtb.html"> <i class="fa fa-circle-o"></i> RMTP</a></li>
+                            <li><a href="fuel-type.html"> <i class="fa fa-circle-o"></i> Fuel Type</a></li>
+                            <li><a href="fuel-tank-type.html"> <i class="fa fa-circle-o"></i> Fuel Tank Type</a></li>
+                            <li><a href="vehicle-segment.html"> <i class="fa fa-circle-o"></i> Vehicle Segment</a></li>
+                            <li><a href="color-code.html"> <i class="fa fa-circle-o"></i> Color Code</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> BANK MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                            <li><a href="bank-master.html"> <i class="fa fa-circle-o"></i> Bank</a></li>           
+            </ul>
+          </li>
+        </ul>
+          <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> SUPPLIER MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                           <li><a href="supplier-master-supplier.html"><i class="fa fa-circle-o"></i>  Supplier</a></li>
+                            <li><a href="master-supplier-location-details.html"><i class="fa fa-circle-o"></i>  Supplier Location</a></li>
+                            <li><a href="master-supplier-type-details.html"><i class="fa fa-circle-o"></i>  Supplier Details</a></li>           
+            </ul>
+          </li>
+        </ul>
+         <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> VARIANT MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                            <li><a href="master-variant-details.html"><i class="fa fa-circle-o"></i> Variant </a></li>           
+            </ul>
+          </li>
+        </ul>
+         
+         <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> MANUFACTURER MATER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                             <li><a href="master-menufacturer-details.html"> <i class="fa fa-circle-o"></i>  Manufacturer </a></li>
+                               <li><a href="Master-Menufacturer-Contact-details.html"><i class="fa fa-circle-o"></i>  Manufacture Contact </a></li>           
+            </ul>
+          </li>
+        </ul>
+         <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> INSURANCE TAX MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                             <li><a href="master-insurance-company-details.html"> <i class="fa fa-circle-o"></i> Insurance Company </a></li> 
+                           <li><a href="insurance-idv-details.html"><i class="fa fa-circle-o"></i> Insurance IDV  </a></li>
+                           <li><a href="master-road-type-tax-details.html"><i class="fa fa-circle-o"></i>  Road Type Tax </a></li>
+                           <li><a href="master-insurance-third-party.html"><i class="fa fa-circle-o"></i>  Insurance Third Party</a></li>
+                           <li><a href="#"><i class="fa fa-circle-o"></i> Insurance Zone</a></li>   
+                           <li><a href="master-insurance-zone-vehicle-segment-car-cc.html"><i class="fa fa-circle-o"></i> Insurance Zone Vehicle Segment Car CC </a></li>  
+                           <li><a href="master-accessories-type-details.html"><i class="fa fa-circle-o"></i>  Accessories Type </a></li>        
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> SERVICES MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                             <li><a href="#"><i class="fa fa-circle-o"></i> Service Name</a></li>
+                               <li><a href="#"><i class="fa fa-circle-o"></i> Car Category</a></li>   
+                               <li><a href="#"><i class="fa fa-circle-o"></i> car category service cost</a></li>  
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Accessories</a></li>      
+            </ul>
+          </li>
+        </ul>
+
+         <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> STATE-CITY MASTER <i class="fa fa-angle-left pull-right"></i></a>
+             <ul class="sidebar-submenu">
+                             <li><a href="master-state.html"><i class="fa fa-circle-o"></i> State</a></li>
+                               <li><a href="master.city.html"><i class="fa fa-circle-o"></i> City</a></li>   
+                               <li><a href="city-unlimited-usage-details.html"><i class="fa fa-circle-o"></i> City Unlimited Usage</a></li>  
+                                <li><a href="city-document.html"><i class="fa fa-circle-o"></i> City Document</a></li>  
+                                <li><a href="city-service.html"><i class="fa fa-circle-o"></i> City Services</a></li>    
+            </ul>
+          </li>
+        </ul>
+         <ul class="sidebar-submenu">
+          <li><a href="javaScript:void();"> </a></li>
+          <li>
+            <a href="javaScript:void();"><i class="fa fa-circle-o"></i> MODEL MASTER <i class="fa fa-angle-left pull-right"></i></a>
+            <ul class="sidebar-submenu">
+                             <li><a href="#"><i class="fa fa-circle-o"></i> Model</a></li>
+                               <li><a href="#"><i class="fa fa-circle-o"></i> Service Schedule</a></li>    
+            </ul>
+          </li>
+        </ul>
+
+      </li>
+                <li>
+                    <a href="index.html" class="waves-effect">
+                        <i class="icon-layers"></i> <span>Quotation Module</span>
+                    </a>
+                </li>
+
+            </ul>
+
+
+
+        </div>
+        <!--End sidebar-wrapper-->
+
+        <!--Start topbar header-->
+        <header class="topbar-nav">
+            <nav class="navbar navbar-expand">
+                <ul class="navbar-nav mr-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link toggle-menu" href="javascript:void();">
+                            <i class="icon-menu menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="search-bar">
+                            <input type="text" class="form-control" placeholder="Enter keywords">
+                            <a href="javascript:void();"><i class="icon-magnifier"></i></a>
+                        </form>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav align-items-center right-nav-link">
+                    <li class="nav-item dropdown-lg">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+                            <i class="icon-bell"></i><span class="badge badge-primary badge-up">1</span></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    You have 1 Notifications
+                                    <span class="badge badge-primary">1</span>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+                    <!--    <li class="nav-item language">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="#"><i class="flag-icon flag-icon-gb"></i></a>
+      <ul class="dropdown-menu dropdown-menu-right">
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-gb mr-2"></i> English</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-fr mr-2"></i> French</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-cn mr-2"></i> Chinese</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-de mr-2"></i> German</li>
+        </ul>
+    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+                            <span class="user-profile"><img src="assets/images/demo-images.jpg" class="img-circle" alt="user avatar"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-item user-details">
+                                <a href="javaScript:void();">
+                                    <div class="media">
+                                        <div class="avatar"><img class="align-self-start mr-3" src="assets/images/demo-images.jpg" alt="user avatar"></div>
+                                        <div class="media-body">
+                                            <h6 class="mt-2 user-title">Technologies</h6>
+                                            <p class="user-subtitle">abcd@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!--End topbar header-->
+
+        <div class="clearfix"></div>
+
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <div class="row pt-2 pb-2">
+                    <div class="col-sm-9">
+                        <h4 class="page-title">Application</h4>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javaScript:void();">Masters</a></li>
+                            <li class="breadcrumb-item"><a href="javaScript:void();">Quotation Module</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form>
+                                 
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <input type="text" class="form-control" id="input-1" placeholder="Client Name / Client No..." disabled>
+                                        </div>
+                                        <!--<div class="form-group col-md-3">-->
+                                        <!--    <input type="text" class="form-control" id="input-3" placeholder="Client Number">-->
+                                        <!--</div>-->
+                                        <!--<div class="form-group col-md-3">-->
+                                        <!--    <input type="text" class="form-control" id="input-2" placeholder="Quotation Number">-->
+                                        <!--</div>-->
+                                        <div class="form-group col-md-3">
+                                            <input type="text" class="form-control" id="input-2" placeholder="Creation Date">
+                                        </div>
+                                        <!--<div class="form-group col-md-3">-->
+                                        <!--    <input type="text" class="form-control" id="input-2" placeholder="Logged In As">-->
+                                        <!--</div>-->
+                                      
+
+
+                                    </div>
+                                    
+                                       <div class="row">
+                                        <div class="form-group col-md-2">
+                                            <div class="form-check padd mb-2">
+
+                                                <input type="checkbox" class="form-check-input" id="check2" value="">
+                                                <label class="form-check-label" for="check2">Client</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <div class="form-check padd mb-2">
+
+                                                <input type="checkbox" class="form-check-input" id="check2" value="">
+                                                <label class="form-check-label" for="check2">Prospect</label>
+                                            </div>
+                                        </div>
+                                          <div class="form-group col-md-2">
+                                            <div class="form-check padd mb-2">
+
+                                                <input type="checkbox" class="form-check-input" id="check2" value="">
+                                                <label class="form-check-label" for="check2">Sale And Lease Back</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="nav nav-tabs nav-tabs-danger nav-justified top-icon">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#tabe-17"><span class="hidden-xs">General</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tabe-18"><span class="hidden-xs">Quotation</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tabe-19"><span class="hidden-xs">Follow Up</span></a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="tabe-17" class="container tab-pane active">
+                                        <form>
+
+                                        
+
+
+
+       <div class="row">
+      <div class="col-lg-8">
+         <div class="card">
+           <div class="card-body ffff ssss">
+           <div class="card-header text-uppercase">PRINCIPAL</div>
+           <hr>
+             <form>
+             <div class="row">
+                 
+                 <div class="form-group col-md-9">
+            <input type="text" class="form-control" id="input-2" placeholder="Company Name">
+           </div>
+           <div class="form-group col-md-3">
+            <input type="text" class="form-control" id="input-1" placeholder="Client Id">
+           </div>
+           
+           
+             <div class="form-group col-md-12">
+               
+               <div class="row" style="padding-left:13px;">
+                   <div class="card-header text-uppercase col-md-3">Client Car Policy</div>
+                <div class="form-check padd mb-2 col-md-3">
+                <input type="checkbox" class="form-check-input margin-t" id="check2" value="">
+                <label class="form-check-label margin-t" for="check2">Tool for Trade</label>
+                </div>
+                <div class="form-check padd mb-2 col-md-3">
+                <input type="checkbox" class="form-check-input margin-t" id="check2" value="">
+                <label class="form-check-label margin-t" for="check2">Perk Category</label>
+                </div>
+                <div class="form-check padd mb-2 col-md-3">
+                <input type="checkbox" class="form-check-input margin-t" id="check2" value="">
+                <label class="form-check-label margin-t" for="check2">CTC</label>
+                </div>
+                </div>
+           </div>
+           <div class="form-group col-md-4">
+            <input type="text" class="form-control" id="input-3" placeholder="Master Agreement Number">
+           </div>
+         
+           
+           
+           <div class="form-group col-md-12">
+               
+               <div class="row" style="padding-left:13px;">
+                   <div class="card-header text-uppercase col-md-3">Client Blocking</div>
+                <div class="form-check padd mb-2 col-md-2">
+                <input type="checkbox" class="form-check-input margin-t" id="check2" value="">
+                </div>
+                
+                </div>
+           </div>
+           
+        
+       
+        </div>
+          </form>
+         </div>
+         </div>
+       </div>
+<div class="col-lg-4">
+         <div class="card jjj">
+        <div class="card-header ddd text-uppercase">Credit Risk</div>
+         <div class="card-body darpan">
+
+          <div class="row">
+           
+            <div class="col-md-12 col-sm-4 col-xs-6 demo-col">
+                <div class="icheck-danger">
+                    <input type="radio" checked id="danger2" name="danger" />
+                    <label for="danger2">NOT APPROVED</label>
+                </div>
+               
+            </div>
+            <div class="col-md-12 col-sm-4 col-xs-6 demo-col">
+                 <div class="radio icheck-success">
+                    <input type="radio" checked id="success2" name="success" />
+                    <label for="success2">APPROVED</label>
+                </div>
+                
+            </div>
+            <div class="col-md-12 col-sm-4 col-xs-6 demo-col">
+                <div class="checkbox icheck-warning">
+                    <input type="radio" checked id="warning2" name="warning" />
+                    <label for="warning">About to Expire</label>
+                </div>
+               
+            </div>
+            
+            <br>
+              <br>
+              <br>
+          <div class="form-group col-md-12">
+    <label for="formGroupExampleInput">Approved Credit <span class="appr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Approved</span></label>
+  </div>
+  <div class="form-group col-md-12">
+    <label for="formGroupExampleInput2">Balance Credit <span class="appr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Approved</span></label>
+  </div>
+  <div class="form-group col-md-12">
+    <label for="formGroupExampleInput2">App. Credit Val. Date <span class="appr">Approved</span></label>
+  </div>
+        </div>
+
+
+
+         </div>
+       </div>
+    
+      </div>
+      </div><!--End Row-->
+                                                
+                                                
+                                            <div class="button">
+                                                <button type="submit" class="btn btn-primary cancel">CANCEL</button>
+                                                <button type="submit" class="btn btn-primary save">SAVE</button>
+                                        </form>
+                                    </div>
+
+                                </div>
+                                <div id="tabe-18" class="container tab-pane fade">
+                                    <form>
+
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label>VEHICLE VARIANTS</label>
+                                                    <select class="form-control multiple-select" multiple="multiple" id="vehicle">
+                                                        
+                                                        <option>Ciaz</option>
+                                                        <option>Honda City</option>
+                                                        <option>Creata</option>
+                                                        <option>i20</option>
+                                                        <option>Baleno</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <label>TENURE</label>
+                                                    <select class="form-control multiple-select" multiple="multiple" id="tenure">
+                                                        <option>2 yrs</option>
+                                                        <option>4 yrs</option>
+                                                        <option>5 yrs</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label>MILEAGE</label>
+                                                    <select class="form-control multiple-select" multiple="multiple" id="milleage">
+                                                        <option>100000</option>
+                                                        <option>200000</option>
+                                                        <option>220000</option>
+                                                        <option>260000</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label>CITY</label>
+                                                    <select class="form-control multiple-select" multiple="multiple" id="vehiclecity">
+                                                        <option>Delhi</option>
+                                                        <option>Mumbai</option>
+                                                        <option>Gurugram</option>
+                                                        <option>Noida</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label>Products</label>
+                                                    <select class="form-control multiple-select" multiple="multiple" id="vehicleproduct">
+                                                        <option>CRV</option>
+                                                        <option>FMRV</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                            <div class="form-group ">
+                                                <label>Down payment</label>
+                                            <input type="text" class="form-control" id="input-1">
+                                           </div>
+                                           </div>
+                                           <div class="col-md-3">
+                                            <div class="form-group ">
+                                                <label>Security Deposit</label>
+                                            <input type="text" class="form-control" id="input-1">
+                                           </div>
+                                           </div>
+                                           
+                                            <div class="col-lg-9">
+                                                
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="form-group" style="float:left;">
+                                                    <input type="hidden" name="" id="quotationvalueinput">
+                                                    <h2 class="text-right mt-3" style="font-size: 20px; line-height: 6px;"><span id="quotationvalue"></span>/48</h2>
+                                                </div>
+                                                <div class="button" style="float:right;">
+                                                    <button type="button" class="btn btn-success btn-sm" id="generate_quotation">Generate Quotation</button>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </form>
+                                    <div class="row mt-3 main-table-box-row headingarea d-none">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 pl-0 pr-0"> <div class="div-table"> <div class="table"> <div class="tr"> <div class="td">Vehicle</div> <div class="td">City</div> <div class="td">Mileage</div> <div class="td">Tenure</div> <div class="td">Product</div> <div class="td"> Ex-showroom price</div> <div class="td"> Road Tax</div> <div class="td"> Registration charges</div> <div class="td"> Other Charges</div> <div class="td">Net Price</div> <div class="td">Base price</div> <div class="td">GST and Cess%</div> <div class="td">Vehicle Discount %</div> <div class="td">Insurance</div> <div class="td"> Insurance Cost</div> <div class="td">Financial Lease</div> <div class="td">Accessories</div> <div class="td">Accessories cost</div> <div class="td">Services</div> <div class="td"> Services Cost</div> <div class="td">Total Rental Lease</div> </div> </div> </div> </div>
+
+                                        <div class="col-lg-12">
+                                          <div class="row quotationarea" id="quotationarea">
+                                                                                       
+                                          </div>
+                                    </div>
+                                  </div>
+                                  </div>
+                   
+
+                                <div id="tabe-19" class="container tab-pane fade">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Date </th>
+                                                <td>Description</td>
+                                                <td>User</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">31-12-2020</th>
+                                                <td>Creation Of Contract No.</td>
+                                                <td>Admin</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">31-12-2020</th>
+                                                <td>Creation Of Contract No.</td>
+                                                <td>Admin</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">31-12-2020</th>
+                                                <td>Creation Of Contract No.</td>
+                                                <td>Admin</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="Vehicles">
+                                        <p>Vehicles To Be Ordered 1</p>
+                                        <p>Ordered Vehicles 0</p>
+                                        <p>Delivered Vehicles 0</p>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+          <!--End Dashboard Content-->
+      <!--start overlay-->
+	  <div class="overlay toggle-menu"></div>
+	<!--end overlay-->
+    </div>
+    <!-- End container-fluid-->
+    
+    </div><!--End content-wrapper-->
+   
+	
+	<!--Start footer-->
+	<footer class="footer">
+      <div class="container">
+        <div class="text-center">
+          © All Rights Reserved. Amazin Automation Solution India Pvt. Ltd.
+        </div>
+      </div>
+    </footer>
+	<!--End footer-->
+   
+  </div><!--End wrapper-->
+
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- simplebar js -->
+    <script src="assets/plugins/simplebar/js/simplebar.js"></script>
+    <!-- waves effect js -->
+    <script src="assets/js/waves.js"></script>
+    <!-- sidebar-menu js -->
+    <script src="assets/js/sidebar-menu.js"></script>
+    <!-- Custom scripts -->
+    <script src="assets/js/app-script.js"></script>
+
+    <!--Bootstrap Touchspin Js-->
+    <script src="assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.js"></script>
+    <script src="assets/plugins/bootstrap-touchspin/js/bootstrap-touchspin-script.js"></script>
+
+    <!--Select Plugins Js-->
+    <script src="assets/plugins/select2/js/select2.min.js"></script>
+    <!--Inputtags Js-->
+    <script src="assets/plugins/inputtags/js/bootstrap-tagsinput.js"></script>
+
+    <!--Bootstrap Datepicker Js-->
+    <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $('#default-datepicker').datepicker({
+            todayHighlight: true
+        });
+        $('#autoclose-datepicker').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        });
+
+        $('#inline-datepicker').datepicker({
+            todayHighlight: true
+        });
+
+        $('#dateragne-picker .input-daterange').datepicker({});
+    </script>
+    <!--Multi Select Js-->
+    <script src="assets/plugins/jquery-multi-select/jquery.multi-select.js"></script>
+    <script src="assets/plugins/jquery-multi-select/jquery.quicksearch.js"></script>
+
+    <script src="assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script src="assets/plugins/ion-rangeslider/js/range-slider-script.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.single-select').select2();
+            $('.multiple-select').select2();
+            //multiselect start
+
+            $('#my_multi_select1').multiSelect();
+            $('#my_multi_select2').multiSelect({
+                selectableOptgroup: true
+            });
+
+            $('#my_multi_select3').multiSelect({
+                selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
+                selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
+                afterInit: function(ms) {
+                    var that = this,
+                        $selectableSearch = that.$selectableUl.prev(),
+                        $selectionSearch = that.$selectionUl.prev(),
+                        selectableSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
+                        selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
+
+                    that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
+                        .on('keydown', function(e) {
+                            if (e.which === 40) {
+                                that.$selectableUl.focus();
+                                return false;
+                            }
+                        });
+
+                    that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
+                        .on('keydown', function(e) {
+                            if (e.which == 40) {
+                                that.$selectionUl.focus();
+                                return false;
+                            }
+                        });
+                },
+                afterSelect: function() {
+                    this.qs1.cache();
+                    this.qs2.cache();
+                },
+                afterDeselect: function() {
+                    this.qs1.cache();
+                    this.qs2.cache();
+                }
+            });
+
+            $('.custom-header').multiSelect({
+                selectableHeader: "<div class='custom-header'>Selectable items</div>",
+                selectionHeader: "<div class='custom-header'>Selection items</div>",
+                selectableFooter: "<div class='custom-header'>Selectable footer</div>",
+                selectionFooter: "<div class='custom-header'>Selection footer</div>"
+            });
+
+
+
+        });
+    </script>
+    <script>
+        $('.add').on('click', add);
+        $('.remove').on('click', remove);
+
+        function add() {
+            var new_chq_no = parseInt($('#total_chq').val()) + 1;
+            var new_input = "<input type='text'class='form-control mt-4'  placeholder='Vehicle Model' id='new_" + new_chq_no + "'>";
+            $('#new_chq').append(new_input);
+            $('#total_chq').val(new_chq_no);
+        }
+
+        function remove() {
+            var last_chq_no = $('#total_chq').val();
+            if (last_chq_no > 1) {
+                $('#new_' + last_chq_no).remove();
+                $('#total_chq').val(last_chq_no - 1);
+            }
+        }
+    </script>
+    <script>
+        $('.add1').on('click', add);
+        $('.remove1').on('click', remove);
+
+        function add() {
+            var new_chq_no = parseInt($('#total_chq').val()) + 1;
+            var new_input = "<input type='text'class='form-control mt-4'  placeholder='Vehicle Varients' id='new_" + new_chq_no + "'>";
+            $('#new_chq1').append(new_input);
+            $('#total_chq1').val(new_chq_no);
+        }
+
+        function remove() {
+            var last_chq_no = $('#total_chq1').val();
+            if (last_chq_no > 1) {
+                $('#new_' + last_chq_no).remove();
+                $('#total_chq1').val(last_chq_no - 1);
+            }
+        }
+    </script>
+
+    <script>
+        $('.add2').on('click', add);
+        $('.remove2').on('click', remove);
+
+        function add() {
+            var new_chq_no = parseInt($('#total_chq2').val()) + 1;
+            var new_input = "<input type='text'class='form-control mt-4'  placeholder='City' id='new_" + new_chq_no + "'>";
+            $('#new_chq2').append(new_input);
+            $('#total_chq2').val(new_chq_no);
+        }
+
+        function remove() {
+            var last_chq_no = $('#total_chq2').val();
+            if (last_chq_no > 1) {
+                $('#new_' + last_chq_no).remove();
+                $('#total_chq2').val(last_chq_no - 1);
+            }
+        }
+    </script>
+
+    <script>
+        $('.add3').on('click', add);
+        $('.remove3').on('click', remove);
+
+        function add() {
+            var new_chq_no = parseInt($('#total_chq2').val()) + 1;
+            var new_input = "<input type='text'class='form-control mt-4'  placeholder='Product' id='new_" + new_chq_no + "'>";
+            $('#new_chq3').append(new_input);
+            $('#total_chq3').val(new_chq_no);
+        }
+
+        function remove() {
+            var last_chq_no = $('#total_chq3').val();
+            if (last_chq_no > 1) {
+                $('#new_' + last_chq_no).remove();
+                $('#total_chq3').val(last_chq_no - 1);
+            }
+        }
+    </script>
+
+    <script>
+        $('.add4').on('click', add);
+        $('.remove4').on('click', remove);
+
+        function add() {
+            var new_chq_no = parseInt($('#total_chq4').val()) + 1;
+            var new_input = "<input type='text'class='form-control mt-4'  placeholder='Tenure' id='new_" + new_chq_no + "'>";
+            $('#new_chq4').append(new_input);
+            $('#total_chq4').val(new_chq_no);
+        }
+
+        function remove() {
+            var last_chq_no = $('#total_chq3').val();
+            if (last_chq_no > 1) {
+                $('#new_' + last_chq_no).remove();
+                $('#total_chq4').val(last_chq_no - 1);
+            }
+        }
+    </script>
+
+
+    <script>
+        function getVals() {
+
+            let parent = this.parentNode;
+            let slides = parent.getElementsByTagName("input");
+            let slide1 = parseFloat(slides[0].value);
+            let slide2 = parseFloat(slides[1].value);
+
+            if (slide1 > slide2) {
+                let tmp = slide2;
+                slide2 = slide1;
+                slide1 = tmp;
+            }
+
+            let displayElement = parent.getElementsByClassName("rangeValues")[0];
+            displayElement.innerHTML = slide1 + "-" + slide2;
+        }
+
+        window.onload = function() {
+
+            let sliderSections = document.getElementsByClassName("range-slider");
+            for (let x = 0; x < sliderSections.length; x++) {
+                let sliders = sliderSections[x].getElementsByTagName("input");
+                for (let y = 0; y < sliders.length; y++) {
+                    if (sliders[y].type === "range") {
+                        sliders[y].oninput = getVals;
+
+                        sliders[y].oninput();
+                    }
+                }
+            }
+        }
+    </script>
+
+
+    <script>
+        $('#vehicle').on('change', function(e, data) {
+            var data = $(this).val();
+            var milleage = $('#milleage').val();
+            var tenure =  $('#tenure').val();
+            var city = $('#vehiclecity').val();
+            var product = $('#vehicleproduct').val();
+
+            if (milleage == null && city == null && product == null && tenure == null) {
+                $('#quotationvalue').html((data.length));
+                $('#quotationvalueinput').val((data.length));
+            } else if (milleage != null && city == null && product == null && tenure == null) {
+                $('#quotationvalue').html((data.length) * (milleage.length));
+                $('#quotationvalueinput').val((data.length) * (milleage.length));
+            } else if (milleage == null && city != null && product == null && tenure == null) {
+                $('#quotationvalue').html((data.length) * (city.length));
+                $('#quotationvalueinput').val((data.length) * (city.length));
+            } else if (milleage == null && city == null && product != null && tenure == null) {
+                $('#quotationvalue').html((data.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (product.length));
+            }else if (milleage == null && city == null && product == null && tenure != null) {
+                $('#quotationvalue').html((data.length) * (tenure.length));
+                $('#quotationvalueinput').val((data.length) * (tenure.length));
+            } else if (milleage != null && city != null && product == null) {
+                $('#quotationvalue').html((data.length) * (milleage.length) * (city.length));
+                $('#quotationvalueinput').val((data.length) * (milleage.length) * (city.length));
+            } else if (milleage != null && city == null && product != null) {
+                $('#quotationvalue').html((data.length) * (milleage.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (milleage.length) * (product.length));
+            } else if (milleage == null && city != null && product != null) {
+                $('#quotationvalue').html((data.length) * (city.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (city.length) * (product.length));
+            } else if (milleage != null && city == null && product != null) {
+                $('#quotationvalue').html((data.length) * (milleage.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (milleage.length) * (product.length));
+            } else {
+                $('#quotationvalue').html((data.length) * (milleage.length) * (city.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (milleage.length) * (city.length) * (product.length));
+            }
+
+            var combinition = $('#quotationvalueinput').val();
+             console.log(combinition);
+            if (combinition <= 48) {
+                console.log('pass');
+            } else {
+                swal("Warning", "You can't create More than 48 Combination", "warning");
+            }
+
+        });
+
+        $('#tenure').on('change', function(e, data) {
+            var model = $('#vehicle').val();
+            var data = $(this).val();
+            var city = $('#vehiclecity').val();
+            var product = $('#vehicleproduct').val();
+            var milleage = $('#milleage').val();
+
+            if (model == null && city == null && product == null && milleage == null) {
+                $('#quotationvalue').html((data.length));
+                $('#quotationvalueinput').val((data.length));
+            } else if (model != null && city == null && product == null && milleage == null) {
+                $('#quotationvalue').html((data.length) * (model.length));
+                $('#quotationvalueinput').val((data.length) * (model.length));
+            } else if (model == null && city != null && product == null && milleage == null) {
+                $('#quotationvalue').html((data.length) * (city.length));
+                $('#quotationvalueinput').val((data.length) * (city.length));
+            } else if (model == null && city == null && product != null && milleage == null) {
+                $('#quotationvalue').html((data.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (product.length));
+            } else if (model == null && city == null && product == null && milleage != null) {
+                $('#quotationvalue').html((data.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (milleage.length));
+            } else if (model != null && city != null && product == null && milleage == null) {
+                $('#quotationvalue').html((data.length) * (model.length) * (city.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (city.length));
+            } else if (model != null && city == null && product != null && milleage == null) {
+                $('#quotationvalue').html((data.length) * (model.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (product.length));
+            } else if (model == null && city != null && product != null && milleage == null) {
+                $('#quotationvalue').html((data.length) * (city.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (city.length) * (product.length));
+            } else if (model != null && city == null && product != null && milleage == null) {
+                $('#quotationvalue').html((data.length) * (model.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (product.length));
+            } else {
+                $('#quotationvalue').html((data.length) * (model.length) * (city.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (city.length) * (product.length));
+            }
+            var combinition = $('#quotationvalueinput').val();
+
+             console.log(combinition);
+            if (combinition <= 48) {
+                console.log('pass');
+            } else {
+                swal("Warning", "You can't create More than 48 Combination", "warning");
+            }
+
+        })
+
+        $('#milleage').on('change', function(e, data) {
+            var model = $('#vehicle').val();
+            var data = $(this).val();
+            var city = $('#vehiclecity').val();
+            var product = $('#vehicleproduct').val();
+            var tenure = $('#tenure').val();
+
+            if (model == null && tenure == null && city == null && product == null) {
+                $('#quotationvalue').html((data.length));
+                $('#quotationvalueinput').val((data.length));
+            } 
+            else if (model != null && tenure == null && city == null && product == null) {
+                $('#quotationvalue').html((data.length) * (model.length));
+                $('#quotationvalueinput').val((data.length) * (model.length));
+            }
+            else if (model == null && tenure != null && city == null && product == null) {
+                $('#quotationvalue').html((data.length) * (tenure.length));
+                $('#quotationvalueinput').val((data.length) * (tenure.length));
+            }
+            else if (model == null  && tenure == null && city != null && product == null) {
+                $('#quotationvalue').html((data.length) * (city.length));
+                $('#quotationvalueinput').val((data.length) * (city.length));
+
+            } else if (model == null && tenure == null && city == null && product != null) {
+                $('#quotationvalue').html((data.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (product.length));
+
+            } else if (model != null && tenure != null && city == null && product == null) {
+                $('#quotationvalue').html((data.length) * (model.length) * (tenure.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (tenure.length));
+
+            }else {
+                $('#quotationvalue').html((data.length) * (model.length) * (tenure.length) * (city.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (tenure.length) * (city.length) * (product.length));
+            }
+            var combinition = $('#quotationvalueinput').val();
+
+             console.log(combinition);
+            if (combinition <= 48) {
+                console.log('pass');
+            } else {
+                swal("Warning", "You can't create More than 48 Combination", "warning");
+            }
+
+        })
+
+        $('#vehiclecity').on('change', function(e, data) {
+            var data = $(this).val();
+            var model = $('#vehicle').val();
+            var product = $('#vehicleproduct').val();
+            var milleage = $('#milleage').val();
+            var tenure =  $('#tenure').val();
+
+            if (model == null  && tenure == null && product == null  && milleage == null) {
+                $('#quotationvalue').html((data.length));
+                $('#quotationvalueinput').val((data.length));
+            } 
+            else if (model != null && tenure == null && product == null  && milleage == null) {
+                $('#quotationvalue').html((data.length) * (model.length));
+                $('#quotationvalueinput').val((data.length) * (model.length));
+            } 
+            else if (model == null && tenure != null && product == null  && milleage == null) {
+                $('#quotationvalue').html((data.length) * (tenure.length) );
+                $('#quotationvalueinput').val((data.length) * (tenure.length));
+            } 
+            else if (model == null && tenure == null && product != null  && milleage == null) {
+                $('#quotationvalue').html((data.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (product.length));
+            }
+            else if (model == null && tenure == null && product == null  && milleage != null) {
+                $('#quotationvalue').html((data.length) * (milleage.length));
+                $('#quotationvalueinput').val((data.length) * (milleage.length)); 
+            }
+            else if (model != null && tenure != null && product == null  && milleage == null) {
+                $('#quotationvalue').html((data.length) * (model.length) * (tenure.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (tenure.length));
+            } 
+            else if (model != null && tenure == null && product != null  && milleage == null) {
+                $('#quotationvalue').html((data.length) * (model.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (product.length));
+            } 
+            else if (model == null && tenure != null && product != null  && milleage == null) {
+                $('#quotationvalue').html((data.length) * (tenure.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (tenure.length) * (product.length));
+            } 
+            else if (model != null && tenure == null && product != null  && milleage == null) {
+                $('#quotationvalue').html((data.length) * (model.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (product.length));
+            } 
+            else if (model != null && tenure == null && product == null  && milleage != null) {
+                $('#quotationvalue').html((data.length) * (model.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (milleage.length));
+            } 
+
+
+            else if (model != null && tenure != null && product == null  && milleage != null) {
+                $('#quotationvalue').html((data.length) * (model.length) * (tenure.length) * (milleage.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (tenure.length) * (milleage.length));
+            }
+
+            else if (model != null && tenure != null && product != null  && milleage == null) {
+                $('#quotationvalue').html((data.length) * (model.length) * (tenure.length) * (product.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (product.length));
+            }
+
+
+            else {
+                $('#quotationvalue').html((data.length) * (model.length) * (tenure.length) * (product.length)* (milleage.length));
+                $('#quotationvalueinput').val((data.length) * (model.length) * (tenure.length) * (product.length)* (milleage.length));
+            }
+            var combinition = $('#quotationvalueinput').val();
+            console.log(combinition);
+            if (combinition <= 48) {
+                console.log('pass');
+            } else {
+                swal("Warning", "You can't create More than 48 Combination", "warning");
+            }
+        })
+
+        $('#vehicleproduct').on('change', function(e, data) {
+            var data = $(this).val();
+            var model = $('#vehicle').val();
+            var milleage = $('#milleage').val();
+            var city = $('#vehiclecity').val();
+            var tenure =  $('#tenure').val();
+            
+            $('#quotationvalue').html((data.length) * (model.length) * (milleage.length) * (city.length)* (tenure.length));
+            $('#quotationvalueinput').val((data.length) * (model.length) * (milleage.length) * (city.length)* (tenure.length));
+
+            var combinition = $('#quotationvalueinput').val();
+            if (combinition <= 48) {
+                console.log('pass');
+            } else {
+                swal("Warning", "You can't create More than 48 Combination", "warning");
+            }
+        })
+    </script>
+
+    <script>
+        $('#generate_quotation').on('click', function(e, data){
+             var model = $('#vehicle').val();
+             var milleage = $('#milleage').val();
+             var city = $('#vehiclecity').val();
+             var products = $('#vehicleproduct').val();
+             var tenure = $('#tenure').val();
+             console.log(tenure);
+             $(".quotationarea").html('');
+            $.each(model, function (index, datas) 
+            { 
+
+              $(".quotationarea").append('<div class="col-md-12 pl-0 pr-0"><ul class="sg-data-listone"> <li> <p style="width: 120px;">'+ datas +'</p> <ul class="sg-data-listtwo quotationarea_city"> </ul> </li></ul></div>');
+                  $('.headingarea').removeClass('d-none');
+                  $(".quotationarea_city").html('');
+                  $(".quotationarea_milleage").html('');
+                  $(".quotationarea_tenure").html('');
+                  $(".quotationarea_products").html('');
+                  
+                  $.each(city, function (index, city_datas) 
+                  {
+                    $(".quotationarea_city").append('<li style="border:1px solid; border-top:none;border-right:none"> <p style="width: 120px;">'+ city_datas +'</p> <ul class="sg-data-listthree quotationarea_milleage"></ul></li>');
+                  });
+                  $.each(milleage, function (index, milleage_datas) 
+                  {
+                    $(".quotationarea_milleage").append('<li style="border:1px solid; border-top:none;border-right:none"> <p style="width: 120px;">'+ milleage_datas +'</p> <ul class="sg-data-listfour quotationarea_tenure"> </ul> </li> ');
+                  });
+
+                  $.each(tenure, function (index, tenure_datas) 
+                  {
+                    $(".quotationarea_tenure").append('<li style="border:1px solid; border-top:none;border-right:none"> <p style="width: 120px;">'+ tenure_datas +'</p> <ul class="sg-data-listfive quotationarea_products"></ul> </li>');
+                  });
+                   $.each(products, function (index, products_datas) 
+                  {
+                    $(".quotationarea_products").append('<li style="border:1px solid; border-top:none;border-right:none;"> <p >'+ products_datas +'</p> <ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p><ul class="sg-data-listsix"><li style="border:1px solid; border-top:none;border-right:none"><p >-</p></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li> </ul></li>');
+                  });
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
